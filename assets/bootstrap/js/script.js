@@ -198,7 +198,7 @@ btn.addEventListener("click", () => {
   parent.classList.toggle("active");
   input.focus();
 });
-
+// console.log(window.location); 
 
 
 
