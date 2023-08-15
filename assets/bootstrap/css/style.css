@@ -16,8 +16,14 @@
   --primary-color: #8f00ff;
   --secondary-color: #00ff8f;
   --btn-background-color: #ff8f00;
+  --hover-color: #dedede;
 }
-
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
 body {
   font-family: var(--font-family);
   color: #fff;
@@ -39,7 +45,7 @@ a {
   transition: preserve-3d 1s;
 }
 a:hover {
-  color: var(--primary-color);
+  color: var(--hover-color);
   text-decoration: none;
 }
 
@@ -1129,6 +1135,194 @@ div:not(.navbar-mobile) .contact_us {
 # Contact Page
 --------------------------------------------------------------*/
 
+.contactForm .label {
+  color: #000;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.form-group.contact-page-form-group {
+  margin-bottom: 1rem;
+}
+
+.ftco-section {
+  padding: 7em 0;
+}
+
+.ftco-no-pt {
+  padding-top: 0;
+}
+
+.ftco-no-pb {
+  padding-bottom: 0;
+}
+
+.heading-section {
+  font-size: 28px;
+  color: #000;
+}
+
+.contact-page.form-control {
+  height: 36px;
+  background: #fff;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 14px;
+  border-radius: 2px;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.contact-page.form-control::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: rgba(0, 0, 0, 0.3) !important;
+}
+
+.contact-page.form-control::-moz-placeholder {
+  /* Firefox 19+ */
+  color: rgba(0, 0, 0, 0.3) !important;
+}
+
+.contact-page.form-control:-ms-input-placeholder {
+  /* IE 0+ */
+  color: rgba(0, 0, 0, 0.3) !important;
+}
+
+.contact-page.form-control:-moz-placeholder {
+  /* Firefox 18- */
+  color: rgba(0, 0, 0, 0.3) !important;
+}
+
+.contact-page.form-control:focus,
+.contact-page.form-control:active {
+  border-color: var(--primary-color) !important;
+  transition: all 0.4s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
+}
+
+textarea.contact-page.form-control {
+  height: inherit !important;
+}
+
+.contact-wrap {
+  background: #fff;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.info-wrap{
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.info-wrap {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.info-wrap h3 {
+  color: #fff;
+}
+
+.info-wrap .dbox {
+  width: 100%;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 25px;
+}
+
+.info-wrap .dbox:last-child {
+  margin-bottom: 0;
+}
+
+.info-wrap .dbox p {
+  margin-bottom: 0;
+}
+
+.info-wrap .dbox p span {
+  font-weight: 500;
+  color: #fff;
+}
+
+.info-wrap .dbox p a {
+  color: #fff;
+}
+
+.info-wrap .dbox .icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.info-wrap .dbox .icon span {
+  font-size: 20px;
+  color: #fff;
+}
+
+.info-wrap .dbox .text {
+  width: calc(100% - 50px);
+}
+
+.contact-wrap h3,
+.contact-page-form-group .label {
+  color: #000;
+}
+
+.contact-wrap #form-message-success{
+  /* display: none; */
+}
+
+
+#contactForm .form-control {
+  font-size: 16px;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0;
+}
+
+.contact_us_2 {
+  padding: 8px 20px;
+  border-radius: 50px;
+  color: var(--color);
+  font-size: 18px;
+  background: var(--btn-background-color);
+  border: 1px solid transparent;
+  font-weight: 600;
+  width: 100%;
+  text-align: start;
+  position: relative;
+}
+
+.contact_us_2 i {
+  position: relative;
+  font-size: 20px;
+  right: 10px;
+  transition: all 0.4s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.contact_us_2:hover i {
+  right: -96%;
+}
+
+.contact_us_2 span + span {
+  position: relative;
+  left: 0px;
+  transition: all 0.4s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.contact_us_2:hover span + span {
+  position: relative;
+  left: -30px;
+}
+
+.contact-page-form-group textarea {
+  resize: none;
+}
+.alert-contact-us{
+  position: absolute;
+  top: 32%;
+  right: 3%;
+}
 
 /* responsive */
 @media (min-width: 1200px) {
@@ -1247,6 +1441,18 @@ div:not(.navbar-mobile) .contact_us {
 }
 
 @media (max-width: 768px) {
+  .contact-wrap {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 0px;
+  }
+  .info-wrap{
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 20px;
+  }
   #hero {
     height: 100vh;
     text-align: center;
