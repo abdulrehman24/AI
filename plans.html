@@ -55,7 +55,7 @@
               </label>
               <label class="card">
                 <input name="plan" value="50" class="radio" type="radio" />
-               
+
                 <span class="plan-details" aria-hidden="true">
                   <span class="plan-type">Bot 2</span>
                   <span class="plan-cost">$50<span class="slash">/</span><span class="plan-cycle">mo</span></span>
@@ -63,7 +63,7 @@
               </label>
               <label class="card">
                 <input name="plan" value="200" class="radio" type="radio" />
-                
+
                 <span class="plan-details" aria-hidden="true">
                   <span class="plan-type">Bot 1 + Bot 2</span>
                   <span class="plan-cost">$200<span class="slash">/</span><span class="plan-cycle">mo</span></span>
@@ -71,7 +71,8 @@
               </label>
               <div class="d-flex justify-content-center flex-column flex-md-row gap-3 text-center mt-4">
                 <button class="btn btn-success submit_plan"><i class="bi bi-check2-circle"></i> Select Plan</button>
-                <button class="btn text-light try_bot" style="background: var(--color-green);"><i class="bi bi-symmetry-horizontal"></i> Try Bot <strong>(7 Day Trial)</strong></button>
+                <button class="btn text-light try_bot" style="background: var(--color-green);"><i
+                    class="bi bi-symmetry-horizontal"></i> Try Bot <strong>(7 Day Trial)</strong></button>
               </div>
             </div>
 
@@ -164,7 +165,7 @@
                         </p>
                       </div>
                       <div class="price_card_body">
-                        
+
                         <div class="pricing_small_p">
                           Get MediNurseAI tailored for your company.
                         </div>
@@ -229,7 +230,7 @@
                         </p>
                       </div>
                       <div class="price_card_body">
-                      
+
                         <div class="pricing_small_p">
                           Get MediNurseAI tailored for your company.
                         </div>
@@ -307,11 +308,11 @@
     function changeDirection() {
       $(".front").css("transform", "perspective(600px) rotateY(0deg)");
       $(".back").css("transform", "perspective(600px) rotateY(180deg)");
-     
+
       $('.plan_list').toggleClass('d-none');
     }
 
-    $(".submit_plan").click(function(e){
+    $(".submit_plan").click(function (e) {
       e.preventDefault();
       var datastring = $("#plan_ai").serialize();
 
@@ -325,14 +326,14 @@
       //           alert('Data send');
       //     }
       // });
-});
-$(document).ready(function () {
-            $(".try_bot").click(function (e) {
-                e.preventDefault();
-               
-                window.location.href = 'payment.html';
-            });
-        });
+    });
+    $(document).ready(function () {
+      $(".try_bot").click(function (e) {
+        e.preventDefault();
+
+        window.location.href = 'payment.html';
+      });
+    });
   </script>
 </body>
 
