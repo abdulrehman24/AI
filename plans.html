@@ -71,7 +71,7 @@
               </label>
               <div class="d-flex justify-content-center flex-column flex-md-row gap-3 text-center mt-4">
                 <button class="btn btn-success submit_plan"><i class="bi bi-check2-circle"></i> Select Plan</button>
-                <button class="btn text-light" style="background: var(--color-green);"><i class="bi bi-symmetry-horizontal"></i> Try Bot <strong>(7 Day Trial)</strong></button>
+                <button class="btn text-light try_bot" style="background: var(--color-green);"><i class="bi bi-symmetry-horizontal"></i> Try Bot <strong>(7 Day Trial)</strong></button>
               </div>
             </div>
 
@@ -326,7 +326,13 @@
       //     }
       // });
 });
-    
+$(document).ready(function () {
+            $(".try_bot").click(function (e) {
+                e.preventDefault();
+               
+                window.location.href = 'payment.html';
+            });
+        });
   </script>
 </body>
 
