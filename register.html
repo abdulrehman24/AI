@@ -69,8 +69,17 @@
                   />
                 </div>
                 <div class="term-and-condition">
-                  <input type="checkbox" id="term--checkbox" class="term--checkbox me-2" />
-                  <label for="term--checkbox" class="me-1"> I agree to <a href="javascript:void(0)" class="text-primary">privacy policy &amp; terms</a></label>
+                  <input
+                    type="checkbox"
+                    id="term--checkbox"
+                    class="term--checkbox me-2"
+                  />
+                  <label for="term--checkbox" class="me-1">
+                    I agree to
+                    <a href="javascript:void(0)" class="text-primary"
+                      >privacy policy &amp; terms</a
+                    ></label
+                  >
                 </div>
                 <div class="button input-box">
                   <input type="submit" value="Submit" />
@@ -84,5 +93,16 @@
         </div>
       </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function () {
+            $(".button").click(function (e) {
+                e.preventDefault();
+               
+                window.location.href = 'plans.html';
+            });
+        });
+    </script>
   </body>
 </html>
