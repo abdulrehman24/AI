@@ -46,7 +46,7 @@
           <form action="#" id="plan_ai">
             <div class="grid">
               <label class="card">
-                <input name="plan1" class="radio" type="radio" checked />
+                <input name="plan" value="20" class="radio" type="radio" checked />
 
                 <span class="plan-details">
                   <span class="plan-type">Bot 1</span>
@@ -54,7 +54,7 @@
                 </span>
               </label>
               <label class="card">
-                <input name="plan2" class="radio" type="radio" />
+                <input name="plan" value="50" class="radio" type="radio" />
                
                 <span class="plan-details" aria-hidden="true">
                   <span class="plan-type">Bot 2</span>
@@ -62,22 +62,22 @@
                 </span>
               </label>
               <label class="card">
-                <input name="plan3" class="radio" type="radio" />
+                <input name="plan" value="200" class="radio" type="radio" />
                 
                 <span class="plan-details" aria-hidden="true">
                   <span class="plan-type">Bot 1 + Bot 2</span>
                   <span class="plan-cost">$200<span class="slash">/</span><span class="plan-cycle">mo</span></span>
                 </span>
               </label>
-              <div class="d-flex gap-3 text-center mt-4">
-                <button class="btn w-50 btn-success submit_plan"><i class="bi bi-check2-circle"></i> Select Plan</button>
-                <button class="btn w-50 text-light" style="background: var(--color-green);"><i class="bi bi-symmetry-horizontal"></i> Try Bot</button>
+              <div class="d-flex justify-content-center flex-column flex-md-row gap-3 text-center mt-4">
+                <button class="btn btn-success submit_plan"><i class="bi bi-check2-circle"></i> Select Plan</button>
+                <button class="btn text-light" style="background: var(--color-green);"><i class="bi bi-symmetry-horizontal"></i> Try Bot <strong>(7 Day Trial)</strong></button>
               </div>
             </div>
 
           </form>
         </div>
-        <div class="plan_list">
+        <div class="plan_list d-none d-md-block">
           <label onclick="changeDirection()" for="flip" href="#" class=""
             style="position: absolute; top: 5px; right: 12px">
             <i class="bi bi bi-sign-turn-left-fill fs-4"></i>
@@ -307,22 +307,25 @@
     function changeDirection() {
       $(".front").css("transform", "perspective(600px) rotateY(0deg)");
       $(".back").css("transform", "perspective(600px) rotateY(180deg)");
+     
+      $('.plan_list').toggleClass('d-none');
     }
-//     $(".submit_plan").click(function(e){
-//       e.preventDefault();
-//       var datastring = $("#plan_ai").serialize();
 
-//       console.log(datastring);
-//       return false;
-//         $.ajax({
-//             type: "POST",
-//             url: "your url.php",
-//             data: datastring,
-//             success: function(data) {
-//                  alert('Data send');
-//             }
-//         });
-// });
+    $(".submit_plan").click(function(e){
+      e.preventDefault();
+      var datastring = $("#plan_ai").serialize();
+
+      console.log(datastring);
+      return false;
+      // $.ajax({
+      //     type: "POST",
+      //     url: "your url.php",
+      //     data: datastring,
+      //     success: function(data) {
+      //           alert('Data send');
+      //     }
+      // });
+});
     
   </script>
 </body>
