@@ -106,7 +106,7 @@ body {
   backface-visibility: hidden;
 }
 
-.container .cover::before,
+/* .container .cover::before,
 .container .cover::after {
   content: "";
   position: absolute;
@@ -115,8 +115,11 @@ body {
   background: var(--primary-color);
   opacity: 0.5;
   z-index: 12;
+} */
+.front img,
+.back img{
+  filter: hue-rotate(45deg);
 }
-
 .container .cover::after {
   opacity: 0.3;
   transform: rotateY(180deg);
@@ -184,7 +187,7 @@ body {
   font-size: 24px;
   font-weight: 500;
   color: #333;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 .title.plan_ai #flip {
   color: var(--color-green);
@@ -381,6 +384,7 @@ body {
 
 .radio:checked ~ .plan-details {
   border-color: var(--color-green);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
 }
 
 .radio:focus ~ .plan-details {
@@ -499,7 +503,7 @@ body {
   border-top-right-radius: 10px;
   flex-direction: column;
   align-items: flex-start;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   font-size: 12px;
   font-weight: 500;
   line-height: 1.5em;
@@ -517,7 +521,7 @@ body {
 }
 .price_card_body {
   flex-direction: column;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   padding-top: 10px;
   padding-bottom: 10px;
   display: flex;
