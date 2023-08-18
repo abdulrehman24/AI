@@ -311,13 +311,11 @@
      
   //   }
 
-
-
   // });
   $(".save_bookmark").click(function () {
     var selectedValues = $('.select2').val();
     console.log(selectedValues);
-    $('#addToBookmark').modal('hide');
+    // $('#addToBookmark').modal('hide');
 
   });
 
@@ -341,6 +339,17 @@
 
   $(".bookmark-icon-notfill").click(function () {
     $('.select_for_bookmark').toggle();
+
+    if($('.chat_input').hasClass('d-none')){
+
+      $('.chat_input').removeClass('d-none');
+      $('.bookmark_input').addClass('d-none');
+    }else{
+      $('.chat_input').addClass('d-none');
+      $('.bookmark_input').removeClass('d-none');
+    }
+    
+    $('.chat_input').toggle();
     $('.chat_image').toggle();
   });
 })();

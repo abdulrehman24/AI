@@ -263,8 +263,8 @@ footer {
 }
 
 .select_for_bookmark {
-  width: 1.5em;
-  height: 1.5em;
+  width: 1em;
+  height: 1em;
   accent-color: red;
   accent-color: #f8a100;
   accent-color: rgba(102, 100, 70, 1);
