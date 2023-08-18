@@ -358,7 +358,7 @@ div:not(.navbar-mobile) .contact_us {
   color: #000;
   font-size: 18px;
   /* background: var(--btn-background-color); */
-  border: 1px solid #000;
+  border: 2px solid var(--btn-background-color);
   font-weight: 600;
 }
 
@@ -366,6 +366,8 @@ div:not(.navbar-mobile) .contact_us {
 .navbar .login:focus:hover {
   color: var(--color);
   background: var(--btn-background-color);
+  border: 2px solid #000;
+
 }
 
 .navbar .dropdown ul {
