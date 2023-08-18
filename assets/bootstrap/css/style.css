@@ -38,6 +38,10 @@ body {
   overflow-x: hidden;
 }
 
+.w-md-25{
+  width: 20% !important;
+ }
+
 a {
   color: #000;
   text-decoration: none;
@@ -889,7 +893,7 @@ div:not(.navbar-mobile) .contact_us {
 .footer-title {
   color: var(--color);
   margin-bottom: 16px;
-  font-size: 20px;
+  font-size: 21px;
   font-weight: 700;
   line-height: 1.1;
 }
@@ -1230,6 +1234,11 @@ textarea.contact-page.form-control {
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: 25px;
 }
+.info-wrap .dbox-footer {
+  width: 100%;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 15px;
+}
 
 .info-wrap .dbox:last-child {
   margin-bottom: 0;
@@ -1243,9 +1252,23 @@ textarea.contact-page.form-control {
   font-weight: 500;
   color: #fff;
 }
+.info-wrap .dbox-footer p span {
+  font-weight: 500;
+  color: #fff;
+}
 
 .info-wrap .dbox p a {
   color: #fff;
+}
+.info-wrap .dbox-footer p a {
+  color: #fff;
+}
+
+.info-wrap .dbox-footer .icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .info-wrap .dbox .icon {
@@ -1255,8 +1278,29 @@ textarea.contact-page.form-control {
   border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
+.info-wrap .dbox .icon-footer {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+.info-wrap .dbox-footer p {
+  margin-bottom: 0;
+}
+.info-wrap .dbox-footer .icon-footer {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
 .info-wrap .dbox .icon span {
   font-size: 20px;
+  color: #fff;
+}
+
+.info-wrap .dbox .icon-footer span {
+  font-size: 15px;
   color: #fff;
 }
 
@@ -1545,6 +1589,9 @@ textarea.contact-page.form-control {
 }
 
 @media (max-width: 575px) {
+  .w-md-25{
+    width: 100% !important;
+   }
   #hero {
     height: 100vh;
     text-align: center;
