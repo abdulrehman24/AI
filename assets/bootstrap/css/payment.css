@@ -370,6 +370,7 @@ input:focus {
 .creditcard .front,
 .creditcard .back {
   position: absolute;
+  /* top:19px; */
   /* top: 100px;
     left: 100px; */
   width: 100%;

@@ -17,6 +17,10 @@
 <body>
   <div class="container">
     <input class="d-none" type="checkbox" id="flip" />
+    <label data-bs-toggle="popover" onclick="changeUrl()" id="back_to_register" class="cursor-pointer"
+      style="position: absolute; top: 5px; left: 12px">
+      <i class="bi bi-arrow-left-circle-fill fs-4"></i>
+    </label>
     <div class="cover">
       <div class="front">
         <img src="assets/images/login.jpg" alt="login" loading="lazy" />
@@ -38,7 +42,8 @@
         <div class="login-form">
           <div class="title plan_ai">
             Select Plan
-            <label onclick="changeDirection()" for="flip" href="#" class="" data-bs-toggle="popover">
+            <label onclick="changeDirection()" for="flip" href="#" class="" id="change_direction"
+              data-bs-toggle="popover">
               <i class="bi bi-info-circle-fill fs-6"></i>
             </label>
           </div>
@@ -70,12 +75,15 @@
                 </span>
               </label>
               <div class="d-flex justify-content-center flex-column flex-md-row gap-3 text-center mt-4">
-                <button class="btn btn-success submit_plan"><i class="bi bi-check2-circle"></i> Select Plan</button>
-                <button class="btn text-light try_bot" style="background: var(--color-green);"><i
-                    class="bi bi-symmetry-horizontal"></i> Try Bot <strong>(7 Day Trial)</strong></button>
+                <button class="btn btn-success submit_plan">
+                  <i class="bi bi-check2-circle"></i> Select Plan
+                </button>
+                <button class="btn text-light try_bot" style="background: var(--color-green)">
+                  <i class="bi bi-symmetry-horizontal"></i> Try Bot
+                  <strong>(7 Day Trial)</strong>
+                </button>
               </div>
             </div>
-
           </form>
         </div>
         <div class="plan_list d-none d-md-block">
@@ -165,7 +173,6 @@
                         </p>
                       </div>
                       <div class="price_card_body">
-
                         <div class="pricing_small_p">
                           Get MediNurseAI tailored for your company.
                         </div>
@@ -230,7 +237,6 @@
                         </p>
                       </div>
                       <div class="price_card_body">
-
                         <div class="pricing_small_p">
                           Get MediNurseAI tailored for your company.
                         </div>
@@ -295,12 +301,22 @@
 
   <script>
     $(document).ready(function () {
-      $('[data-bs-toggle="popover"]').popover({
+      $('#change_direction').popover({
+
         trigger: "hover",
         placement: "top",
         html: true,
         content: function () {
           return `<div class="custom-popover-content">View Packages?</div>`;
+        },
+      });
+      $('#back_to_register').popover({
+
+        trigger: "hover",
+        placement: "top",
+        html: true,
+        content: function () {
+          return `<div class="custom-popover-content">Back To Register</div>`;
         },
       });
     });
@@ -309,7 +325,7 @@
       $(".front").css("transform", "perspective(600px) rotateY(0deg)");
       $(".back").css("transform", "perspective(600px) rotateY(180deg)");
 
-      $('.plan_list').toggleClass('d-none');
+      $(".plan_list").toggleClass("d-none");
     }
 
     $(".submit_plan").click(function (e) {
@@ -331,9 +347,12 @@
       $(".try_bot").click(function (e) {
         e.preventDefault();
 
-        window.location.href = 'payment.html';
+        window.location.href = "payment.html";
       });
     });
+    function changeUrl() {
+      window.location.href = "register.html";
+    }
   </script>
 </body>
 
