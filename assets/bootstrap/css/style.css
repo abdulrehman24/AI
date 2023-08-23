@@ -1370,6 +1370,13 @@ textarea.contact-page.form-control {
   top: 32%;
   right: 3%;
 }
+.check_tool{
+  color: var(--primary-color);
+  
+}
+.mt-8{
+  margin-top: 8rem;
+}
 
 /* responsive */
 @media (min-width: 1200px) {
